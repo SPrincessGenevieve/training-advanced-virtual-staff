@@ -46,8 +46,6 @@ const TopThreeList = [
 export default function TopThree({ item, isTopThree }: SearchT) {
   const [isUltra, setIsUltra] = useState(0);
 
-  console.log("ITEM: ", item);
-
   useEffect(() => {
     const checkWidth = () => {
       setIsUltra(window.innerWidth);
