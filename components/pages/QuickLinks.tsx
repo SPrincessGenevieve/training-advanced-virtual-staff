@@ -65,6 +65,7 @@ export default function QuickLinks() {
       </div>
       <div className={`${styles.quickLiinkLogo}`}>
         <Image
+          priority
           src={"/logo.png"}
           alt={""}
           width={400}

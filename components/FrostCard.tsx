@@ -17,6 +17,7 @@ export default function FrostCard({ src, title, desc, href }: FrostT) {
     >
       <div className="w-full relative h-full bg-primary-blue-400/40 backdrop-blur-sm p-2 flex flex-col items-center justify-center">
         <Image
+          priority
           src={src}
           alt=""
           className="w-auto h-35"

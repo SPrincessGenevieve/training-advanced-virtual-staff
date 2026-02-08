@@ -78,6 +78,7 @@ export default function Explore() {
               <div className="z-30 absolute w-full h-full flex gap-4 items-center p-4">
                 <div className="flex w-20 h-full">
                   <Image
+                    priority
                     src={item.list}
                     alt=""
                     width={400}

@@ -15,6 +15,7 @@ export default function Header({ onClick }: { onClick: () => void }) {
           className={`w-full h-18 gap-5 absolute top-0 flex items-center px-30 global-padding py-2`}
         >
           <Image
+            priority
             src={"/logo-outline.png"}
             alt=""
             width={400}
@@ -24,6 +25,7 @@ export default function Header({ onClick }: { onClick: () => void }) {
           <Label className="font-light">ADVANCED VIRTUAL STAFF</Label>
         </div>
         <Image
+          priority
           src={"/bg2.png"}
           className="w-full h-full opacity-30 absolute top-0 object-cover mix-blend-plus-lighter"
           width={3000}
@@ -39,6 +41,7 @@ export default function Header({ onClick }: { onClick: () => void }) {
           </Label>
         </div>
         <Image
+          priority
           src={"/per.png"}
           alt="person"
           width={3000}
