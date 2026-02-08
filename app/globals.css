@@ -29,6 +29,7 @@
   --color-primary-blue-100: #053f5c;
   --color-primary-blue-200: #157db1;
   --color-primary-blue-300: #00aaff;
+  --color-primary-blue-400: #26b7ff;
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -59,9 +60,10 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
-  --primary-blue-100: #053f5c;
-  --primary-blue-200: #157db1;
-  --primary-blue-300: #00aaff;
+  --primary-blue-100: oklch(34.924% 0.07407 237.823);
+  --primary-blue-200: oklch(56.029% 0.11794 237.877);
+  --primary-blue-300: oklch(70.72% 0.16803 242.065);
+  --primary-blue-400: oklch(74.003% 0.15375 237.421);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -100,6 +102,7 @@
   --primary-blue-100: #053f5c;
   --primary-blue-200: #157db1;
   --primary-blue-300: #00aaff;
+  --primary-blue-400: #26b7ff;
   --primary-foreground: oklch(0.205 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
@@ -153,7 +156,7 @@
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgb(255, 0, 0) transparent;
+  scrollbar-color: rgb(82, 197, 226) transparent;
 }
 
 .dark ::-webkit-scrollbar-track {
@@ -200,5 +203,19 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media (max-width: 1630px) {
+  .global-padding {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 555px) {
+  .global-padding {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

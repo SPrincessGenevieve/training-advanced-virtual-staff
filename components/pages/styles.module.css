@@ -1,0 +1,97 @@
+@media (max-width: 1220px) {
+  .exploreMain {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4vh;
+  }
+  .exploreTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 100%;
+  }
+  .exploreFilter {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+}
+
+@media (max-width: 1235px) {
+  .headerImage {
+    right: 10;
+    width: 55vh;
+  }
+}
+@media (max-width: 1110px) {
+  .exploreList,
+  .newbieList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 800px) {
+    .contactCont {
+      flex-direction: column;
+    }
+  }
+}
+@media (max-width: 785px) {
+  .exploreList,
+  .newbieList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .quickListCont {
+    flex-direction: column;
+  }
+  .quickListCont,
+  .quickListDesc,
+  .quickLiinkLink,
+  .quickLiinkLogo {
+    width: 100%;
+  }
+  .quickLiinkLogo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .headerCont {
+    height: 50vh;
+  }
+  .headerImage {
+    margin-right: -10vh;
+  }
+}
+
+@media (max-width: 760px) {
+  .courseList {
+    flex-wrap: nowrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .CardCont {
+    max-width: 100%;
+  }
+}
+@media (max-width: 555px) {
+  .exploreList,
+  .newbieList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .exploreFilterBtn {
+    font-size: 12px;
+  }
+  .globalPadding {
+    padding: 20px;
+  }
+  .H1 {
+    font-size: 1.5rem;
+  }
+  .H2 {
+    font-size: 1.1rem;
+  }
+  .P {
+    font-size: 0.8rem;
+  }
+}

@@ -4,7 +4,7 @@ import * as React from "react";
 import { Label as LabelPrimitive } from "radix-ui";
 
 import { cn } from "@/lib/utils";
-
+import styles from "@/components/pages/styles.module.css";
 type Variant = "default" | "h1" | "h2" | "p";
 
 interface LabelProps extends React.ComponentProps<typeof LabelPrimitive.Root> {
@@ -13,9 +13,9 @@ interface LabelProps extends React.ComponentProps<typeof LabelPrimitive.Root> {
 
 const variantClass: Record<Variant, string> = {
   default: "text-sm",
-  h1: "text-[2.5rem] font-semibold",
-  h2: "text-[1.1rem] font-semibold",
-  p: "text-[1rem] font-light",
+  h1: `text-[2.5rem] font-semibold ${styles.H1}`,
+  h2: `text-[1.1rem] font-semibold ${styles.H2}`,
+  p: `text-[1rem] font-light ${styles.P}`,
 };
 
 function Label({ className, variant = "default", ...props }: LabelProps) {
