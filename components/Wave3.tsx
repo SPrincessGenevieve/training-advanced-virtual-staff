@@ -22,7 +22,7 @@ export default function Wave3() {
           height="100%"
         >
           <image
-            href="/virtualOffice.png"
+            href="https://res.cloudinary.com/dqgkvrmve/image/upload/v1770556970/virtualOffice_ozqxrn.png"
             preserveAspectRatio="xMidYMid slice"
           />
         </pattern>

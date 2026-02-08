@@ -8,6 +8,7 @@ import Wave from "../Wave";
 import Image from "next/image";
 import styles from "./styles.module.css";
 import { useRouter } from "next/navigation";
+import { CldVideoPlayer } from "next-cloudinary";
 
 interface ListT {
   label: string;
@@ -27,27 +28,27 @@ export const course = [
       {
         label: "Digital Marketing & e-Commerce",
         link: "/COURSE/DigitalMarketing.mp4",
-        href: "https://grow.google/certificates/digital-marketing-ecommerce/#?modal_active=none",
+        href: "DigitalMarketing_eljgow",
       },
       {
         label: "Facebook Ads",
         link: "/COURSE/fb.mp4",
-        href: "https://www.facebook.com/business/learn/certification/exams/100-101-exam",
+        href: "fb_hc1ywp",
       },
       {
         label: "TikTok Ads",
         link: "/COURSE/tiktok.mp4",
-        href: "https://ads.tiktok.com/business/learn/course/list",
+        href: "tiktok_g8ce2p",
       },
       {
         label: "Google Ads",
         link: "/COURSE/google-ads.mp4",
-        href: "https://skillshop.exceedlms.com/student/catalog/list?category_ids=2844-google-ads-certifications&difficulty=1&sort=hot",
+        href: "google-ads_ur8uzn",
       },
       {
         label: "LinkedIn Ads",
         link: "/COURSE/LinkedIn.mp4",
-        href: "https://training.marketing.linkedin.com/page/certifications",
+        href: "LinkedIn_eyyuls",
       },
     ],
   },
@@ -57,22 +58,22 @@ export const course = [
       {
         label: "Go High Level",
         link: "/COURSE/high-level.mp4",
-        href: "https://www.gohighlevel.com/welcome-course",
+        href: "high-level_gqirbj",
       },
       {
         label: "HubSpot",
         link: "/COURSE/hubspot.mp4",
-        href: "https://academy.hubspot.com/certification-overview",
+        href: "hubspot_hku66c",
       },
       {
         label: "Dubsado",
         link: "/COURSE/dubsado.mp4",
-        href: "https://education.dubsado.com/certified-dubsado-specialist-2023",
+        href: "dubsado_egky5f",
       },
       {
         label: "Kajabi",
         link: "/COURSE/KAJABI.mp4",
-        href: "https://university.mykajabi.com/courses",
+        href: "KAJABI_dwv7fx",
       },
     ],
   },
@@ -82,17 +83,17 @@ export const course = [
       {
         label: "Shopify",
         link: "/COURSE/shopify.mp4",
-        href: "https://www.shopify.com/learn",
+        href: "shopify_lyyh0u",
       },
       {
         label: "Project Management",
         link: "/COURSE/project-management.mp4",
-        href: "https://grow.google/certificates/project-management/#?modal_active=none",
+        href: "project-management_slfinb",
       },
       {
         label: "IT Support",
         link: "/COURSE/it-support.mp4",
-        href: "https://grow.google/certificates/it-support/#?modal_active=none",
+        href: "it-support_bgys6p",
       },
     ],
   },
@@ -102,17 +103,17 @@ export const course = [
       {
         label: "Google Analytics",
         link: "/COURSE/google-analytics.mp4",
-        href: "https://analytics.google.com/analytics/academy/",
+        href: "google-analytics_qst5he",
       },
       {
         label: "Data Analytics",
         link: "/COURSE/data-analytics.mp4",
-        href: "https://grow.google/certificates/data-analytics/#?modal_active=none",
+        href: "data-analytics_zpict5",
       },
       {
         label: "UX Design",
         link: "/COURSE/ux.mp4",
-        href: "https://grow.google/certificates/ux-design/#?modal_active=none",
+        href: "ux_p4to9z",
       },
     ],
   },
@@ -178,7 +179,7 @@ export default function RecommendedCourses() {
                     muted
                     loop
                     playsInline
-                    preload="auto"
+                    preload="metadata"
                     width={400}
                     height={400}
                     className="w-full h-[80%] object-cover"
@@ -200,20 +201,27 @@ export default function RecommendedCourses() {
                 className={`w-full cursor-pointer hover:scale-105 transition ease-in-out hover:shadow-primary-blue-400/70 hover:shadow-2xl max-w-80 h-100 p-0 border border-primary-blue-400 bg-transparent ${styles.CardCont}`}
               >
                 <CardContent className="p-0 h-full flex flex-col justify-between border-0 bg-transparent">
-                  <video
+                  <CldVideoPlayer
+                    src={item.href}
+                    width="800"
+                    height="450"
+                    controls
+                    className="w-full h-[80%] object-cover"
+                  />
+                  {/* <video
                     key={item.link}
                     autoPlay
                     muted
                     loop
                     playsInline
-                    preload="auto"
+                    preload="metadata"
                     width={400}
                     height={400}
                     className="w-full h-[80%] object-cover"
                     style={{ pointerEvents: "none" }} // This makes it unclickable/untouchable
                   >
                     <source src={item.link} type="video/mp4" />
-                  </video>
+                  </video> */}
                   <div className="p-4 w-full h-[20%] flex items-center justify-center">
                     <Label>{item.label}</Label>
                   </div>

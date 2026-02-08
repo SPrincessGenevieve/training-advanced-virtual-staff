@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { Label } from "../ui/label";
 import styles from "./styles.module.css";
+import { CldImage } from "next-cloudinary";
 
 export default function Header({ onClick }: { onClick: () => void }) {
   return (
@@ -24,14 +25,20 @@ export default function Header({ onClick }: { onClick: () => void }) {
           ></Image>
           <Label className="font-light">ADVANCED VIRTUAL STAFF</Label>
         </div>
-        <Image
+        <CldImage
+          className="w-full h-full opacity-30 absolute top-0 object-cover mix-blend-plus-lighter"
+          src="bg2_bmj1jw"
+          width="1000"
+          height="1000"
+          alt=""
+        />
+        {/* <Image
           priority
           src={"/bg2.png"}
-          className="w-full h-full opacity-30 absolute top-0 object-cover mix-blend-plus-lighter"
           width={3000}
           height={3000}
           alt=""
-        ></Image>
+        ></Image> */}
         <div className="absolute z-30 left-0 w-full max-w-190 px-30 global-padding">
           <Label variant="h2">We Hire Virtual Staff</Label>
           <Label variant="h1">With These Skills</Label>
@@ -40,14 +47,13 @@ export default function Header({ onClick }: { onClick: () => void }) {
             courses, you’re able to qualify and come work with us!
           </Label>
         </div>
-        <Image
-          priority
-          src={"/per.png"}
-          alt="person"
-          width={3000}
-          height={3000}
+        <CldImage
           className={`${styles.headerImage} absolute w-170 z-20 h-auto bottom-0 right-40`}
-        ></Image>
+          src="per_zvd57z"
+          width="400"
+          height="400"
+          alt="Per"
+        />
       </div>
     </div>
   );

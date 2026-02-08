@@ -24,19 +24,19 @@ interface SearchT {
 
 const TopThreeList = [
   {
-    link: "/topThree/Tiktok.gif",
+    link: "tiktok_j4lnwg",
     title: "Tiktok",
     desc: "18 Courses",
     href: "https://ads.tiktok.com/business/learn/course/list",
   },
   {
-    link: "/topThree/shopify.gif",
+    link: "shopify_a2vupa",
     title: "Shopify",
     desc: "58 Courses",
     href: "https://www.shopify.com/learn",
   },
   {
-    link: "/topThree/LinkedIn.gif",
+    link: "linkedin_rzlw3f",
     title: "LinkedIn Ads",
     desc: "23 Courses",
     href: "https://training.marketing.linkedin.com/page/certifications",
@@ -86,7 +86,7 @@ export default function TopThree({ item, isTopThree }: SearchT) {
                         muted
                         loop
                         playsInline
-                        preload="auto"
+                        preload="metadata"
                         width={400}
                         height={400}
                         className="w-full h-[80%] object-cover"
