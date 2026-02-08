@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Label } from "../ui/label";
 import { Button } from "../ui/button";
 import { useUserContext } from "@/context/UserContext";
+import VideoCard from "../VideoCard";
 import { Card, CardContent } from "../ui/card";
 import Wave from "../Wave";
 import Image from "next/image";
@@ -28,27 +29,27 @@ export const course = [
       {
         label: "Digital Marketing & e-Commerce",
         link: "/COURSE/DigitalMarketing.mp4",
-        href: "DigitalMarketing_eljgow",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556832/DigitalMarketing_eljgow.mp4",
       },
       {
         label: "Facebook Ads",
         link: "/COURSE/fb.mp4",
-        href: "fb_hc1ywp",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556813/fb_hc1ywp.mp4",
       },
       {
         label: "TikTok Ads",
         link: "/COURSE/tiktok.mp4",
-        href: "tiktok_g8ce2p",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556815/tiktok_g8ce2p.mp4",
       },
       {
         label: "Google Ads",
         link: "/COURSE/google-ads.mp4",
-        href: "google-ads_ur8uzn",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556811/google-ads_ur8uzn.mp4",
       },
       {
         label: "LinkedIn Ads",
         link: "/COURSE/LinkedIn.mp4",
-        href: "LinkedIn_eyyuls",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556830/LinkedIn_eyyuls.mp4",
       },
     ],
   },
@@ -58,22 +59,22 @@ export const course = [
       {
         label: "Go High Level",
         link: "/COURSE/high-level.mp4",
-        href: "high-level_gqirbj",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556854/high-level_gqirbj.mp4",
       },
       {
         label: "HubSpot",
         link: "/COURSE/hubspot.mp4",
-        href: "hubspot_hku66c",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556831/hubspot_hku66c.mp4",
       },
       {
         label: "Dubsado",
         link: "/COURSE/dubsado.mp4",
-        href: "dubsado_egky5f",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556815/dubsado_egky5f.mp4",
       },
       {
         label: "Kajabi",
         link: "/COURSE/KAJABI.mp4",
-        href: "KAJABI_dwv7fx",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556862/KAJABI_dwv7fx.mp4",
       },
     ],
   },
@@ -83,17 +84,17 @@ export const course = [
       {
         label: "Shopify",
         link: "/COURSE/shopify.mp4",
-        href: "shopify_lyyh0u",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556876/shopify_lyyh0u.mp4",
       },
       {
         label: "Project Management",
         link: "/COURSE/project-management.mp4",
-        href: "project-management_slfinb",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556828/project-management_slfinb.mp4",
       },
       {
         label: "IT Support",
         link: "/COURSE/it-support.mp4",
-        href: "it-support_bgys6p",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556869/it-support_bgys6p.mp4",
       },
     ],
   },
@@ -103,17 +104,17 @@ export const course = [
       {
         label: "Google Analytics",
         link: "/COURSE/google-analytics.mp4",
-        href: "google-analytics_qst5he",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556813/google-analytics_qst5he.mp4",
       },
       {
         label: "Data Analytics",
         link: "/COURSE/data-analytics.mp4",
-        href: "data-analytics_zpict5",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556786/data-analytics_zpict5.mp4",
       },
       {
         label: "UX Design",
         link: "/COURSE/ux.mp4",
-        href: "ux_p4to9z",
+        href: "https://res.cloudinary.com/dqgkvrmve/video/upload/v1770556858/ux_p4to9z.mp4",
       },
     ],
   },
@@ -169,27 +170,11 @@ export default function RecommendedCourses() {
             filteredCourse.list.map((item, i) => (
               <Card
                 key={i}
-                onClick={() => window.open(item.href, "_blank")}
+                onClick={() => window.open("", "_blank")}
                 className={`w-full cursor-pointer hover:scale-105 transition ease-in-out hover:shadow-primary-blue-400/70 hover:shadow-2xl max-w-80 h-100 p-0 border border-primary-blue-400 bg-transparent ${styles.CardCont}`}
               >
                 <CardContent className="p-0 h-full flex flex-col justify-between border-0 bg-transparent">
-                  <video
-                    key={item.link}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    width={400}
-                    height={400}
-                    className="w-full h-[80%] object-cover"
-                    style={{ pointerEvents: "none" }} // This makes it unclickable/untouchable
-                  >
-                    <source src={item.link} type="video/mp4" />
-                  </video>
-                  <div className="p-4 w-full h-[20%] flex items-center justify-center">
-                    <Label>{item.label}</Label>
-                  </div>
+                  <VideoCard src={item.href} label={item.label}></VideoCard>
                 </CardContent>
               </Card>
             ))
@@ -203,25 +188,9 @@ export default function RecommendedCourses() {
                 <CardContent className="p-0 h-full flex flex-col justify-between border-0 bg-transparent">
                   <CldVideoPlayer
                     src={item.href}
-                    width="800"
-                    height="450"
                     controls
                     className="w-full h-[80%] object-cover"
                   />
-                  {/* <video
-                    key={item.link}
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    width={400}
-                    height={400}
-                    className="w-full h-[80%] object-cover"
-                    style={{ pointerEvents: "none" }} // This makes it unclickable/untouchable
-                  >
-                    <source src={item.link} type="video/mp4" />
-                  </video> */}
                   <div className="p-4 w-full h-[20%] flex items-center justify-center">
                     <Label>{item.label}</Label>
                   </div>

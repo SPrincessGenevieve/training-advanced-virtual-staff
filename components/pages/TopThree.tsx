@@ -5,6 +5,8 @@ import FrostCard from "../FrostCard";
 import { Label } from "../ui/label";
 import styles from "./styles.module.css";
 import { Card, CardContent } from "../ui/card";
+import { CldVideoPlayer } from "next-cloudinary";
+import VideoCard from "../VideoCard";
 
 interface ListT {
   label: string;
@@ -78,23 +80,7 @@ export default function TopThree({ item, isTopThree }: SearchT) {
                     className={`w-full cursor-pointer hover:scale-105 transition ease-in-out hover:shadow-primary-blue-400/70 hover:shadow-2xl max-w-80 h-100 p-0 border border-primary-blue-400 bg-transparent ${styles.CardCont}`}
                   >
                     <CardContent className="p-0 h-full flex flex-col justify-between border-0 bg-transparent">
-                      <video
-                        key={item.link}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        preload="metadata"
-                        width={400}
-                        height={400}
-                        className="w-full h-[80%] object-cover"
-                        style={{ pointerEvents: "none" }} // This makes it unclickable/untouchable
-                      >
-                        <source src={item.link} type="video/mp4" />
-                      </video>
-                      <div className="p-4 w-full h-[20%] flex items-center justify-center">
-                        <Label>{item.label}</Label>
-                      </div>
+                      <VideoCard src={item.href} label={item.label}></VideoCard>
                     </CardContent>
                   </Card>
                 ))
