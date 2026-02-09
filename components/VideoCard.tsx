@@ -18,8 +18,8 @@ export default function VideoCard({
           loop
           playsInline
           className="w-full h-[80%] object-cover"
-          onCanPlay={() => setLoading(false)} // Hide overlay when video is ready
-          onWaiting={() => setLoading(true)} // Show overlay if video is buffering
+          // onCanPlay={() => setLoading(false)}
+          // onWaiting={() => setLoading(true)}
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center bg-gray-300">
