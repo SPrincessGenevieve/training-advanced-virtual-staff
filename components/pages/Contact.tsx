@@ -7,28 +7,29 @@ import { Clock, Mail } from "lucide-react";
 import styles from "./styles.module.css";
 import Link from "next/link";
 import { toast } from "sonner";
+import Image from "next/image";
 
 export default function Contact() {
   const social = [
     {
       link: "",
-      icon: "bi bi-facebook",
+      icon: "/fb.png",
     },
     {
       link: "",
-      icon: "bi bi-youtube",
+      icon: "/y.png",
     },
     {
       link: "",
-      icon: "bi bi-linkedin",
+      icon: "/lk.png",
     },
     {
       link: "",
-      icon: "bi bi-instagram",
+      icon: "/insta.png",
     },
     {
       link: "",
-      icon: "bi bi-tiktok",
+      icon: "/tik.png",
     },
   ];
 
@@ -98,10 +99,13 @@ export default function Contact() {
               </div>
               <div className="w-full  flex gap-4 justify-end items-center">
                 {social.map((item, i) => (
-                  <i
-                    key={i}
-                    className={`${item.icon} text-2xl hover:scale-125 shadow-2xl transition ease-in-out cursor-pointer text-white`}
-                  ></i>
+                  <Image
+                    src={item.icon}
+                    alt=""
+                    className="h-8 w-auto hover:scale-125 shadow-2xl transition ease-in-out cursor-pointer"
+                    width={400}
+                    height={400}
+                  ></Image>
                 ))}
               </div>
             </div>

@@ -28,8 +28,9 @@ export default function Header({ onClick }: { onClick: () => void }) {
         <CldImage
           className="w-full h-full opacity-30 absolute top-0 object-cover mix-blend-plus-lighter"
           src="bg2_bmj1jw"
-          width="1000"
-          height="1000"
+          width="822"
+          height="821"
+          sizes="max-inline-size: 768px 100vw, 412px"
           alt=""
         />
         {/* <Image
@@ -50,9 +51,10 @@ export default function Header({ onClick }: { onClick: () => void }) {
         <CldImage
           className={`${styles.headerImage} absolute w-170 z-20 h-auto bottom-0 right-40`}
           src="per_zvd57z"
-          width="400"
+          width="828"
           height="400"
           alt="Per"
+          sizes="max-inline-size: 768px 100vw, 412px"
         />
       </div>
     </div>

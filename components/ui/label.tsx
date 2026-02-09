@@ -5,6 +5,7 @@ import { Label as LabelPrimitive } from "radix-ui";
 
 import { cn } from "@/lib/utils";
 import styles from "@/components/pages/styles.module.css";
+
 type Variant = "default" | "h1" | "h2" | "p";
 
 interface LabelProps extends React.ComponentProps<typeof LabelPrimitive.Root> {
